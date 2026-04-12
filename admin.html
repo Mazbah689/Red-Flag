@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | Red Flag</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body data-page="admin">
+    <header class="auth-header">
+      <div class="container auth-nav">
+        <a class="brand" href="index.html">Red Flag</a>
+      </div>
+    </header>
+
+    <main class="container admin-container">
+      <section id="adminLoginSection" class="auth-card card shadow">
+        <h1>Admin Login</h1>
+        <form id="adminLoginForm" class="form-grid" novalidate>
+          <label>
+            Admin email
+            <input type="email" id="adminEmail" placeholder="admin@redflag.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="adminPassword" placeholder="Enter admin password" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Login</button>
+          <p id="adminMessage" class="message"></p>
+        </form>
+      </section>
+
+      <section id="adminDashboardSection" class="admin-dashboard" hidden>
+        <div class="admin-header card shadow">
+          <div>
+            <h1>Admin Dashboard</h1>
+            <p>Manage donor records and keep the system up to date.</p>
+          </div>
+          <button id="adminLogoutBtn" class="btn btn-secondary"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+
+        <div class="card shadow admin-panel">
+          <h2>Add donor</h2>
+          <form id="adminAddForm" class="form-grid" novalidate>
+            <label>
+              Full Name
+              <input type="text" id="adminName" required />
+            </label>
+            <label>
+              Email address
+              <input type="email" id="adminEmailAdd" required />
+            </label>
+            <label>
+              Blood Group
+              <select id="adminBloodGroup" required>
+                <option value="">Select blood group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </label>
+            <label>
+              Phone Number
+              <input type="tel" id="adminPhone" required />
+            </label>
+            <label>
+              Address
+              <textarea id="adminAddress" rows="2" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Add Donor</button>
+            <p id="adminAddMessage" class="message"></p>
+          </form>
+        </div>
+
+        <section class="card shadow admin-table-card">
+          <h2>All Donors</h2>
+          <div id="adminTableMessage" class="message"></div>
+          <div class="table-scroll">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Blood Group</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Address</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="adminDonorTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Red Flag &copy; 2026</p>
+    </footer>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

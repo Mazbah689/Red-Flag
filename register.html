@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Red Flag</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body data-page="register">
+    <header class="auth-header">
+      <div class="container auth-nav">
+        <a class="brand" href="index.html">Red Flag</a>
+      </div>
+    </header>
+
+    <main class="container auth-container">
+      <div class="auth-card card shadow">
+        <h1>Register as a donor</h1>
+        <p>Create your donor profile and stay ready for emergencies.</p>
+        <form id="registerForm" class="form-grid" novalidate>
+          <label>
+            Full Name
+            <input type="text" id="registerName" name="name" placeholder="Full name" required />
+          </label>
+          <label>
+            Email address
+            <input type="email" id="registerEmail" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="registerPassword" name="password" placeholder="Create a password" required />
+          </label>
+          <label>
+            Blood Group
+            <select id="registerBloodGroup" name="bloodGroup" required>
+              <option value="">Select blood group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" id="registerPhone" name="phone" placeholder="123-456-7890" required />
+          </label>
+          <label>
+            Address
+            <textarea id="registerAddress" name="address" rows="3" placeholder="City, state or locality" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Register</button>
+          <p class="small-text">Already registered? <a href="login.html" class="auth-link-login">Login here!</a></p>
+          <p id="registerMessage" class="message"></p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Red Flag &copy; 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

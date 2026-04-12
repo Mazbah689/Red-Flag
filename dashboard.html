@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Red Flag</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body data-page="dashboard">
+    <header class="dashboard-header">
+      <div class="container dashboard-top">
+        <a class="brand" href="index.html">Red Flag</a>
+        <button id="logoutBtn" class="btn btn-secondary logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+      </div>
+    </header>
+
+    <main class="container dashboard-container">
+      <section class="dashboard-greeting card shadow">
+        <div>
+          <h1 id="welcomeMessage">Welcome back, Donor</h1>
+          <p>Use the menu below to search for donors, update your profile, or logout securely.</p>
+        </div>
+      </section>
+
+      <section class="dashboard-menu cards-grid">
+        <article class="card shadow">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>Search Donor</h3>
+          <p>Quickly find donors by blood group when minutes matter.</p>
+          <a class="card-link" href="search.html">Go to search</a>
+        </article>
+        <article class="card shadow">
+          <i class="fa-solid fa-user-pen"></i>
+          <h3>My Profile</h3>
+          <p>Review and update your donor contact information.</p>
+          <button id="editProfileBtn" class="card-link btn-link">Edit profile</button>
+        </article>
+        <article class="card shadow">
+          <i class="fa-solid fa-circle-info"></i>
+          <h3>Support</h3>
+          <p>Keep your donor data up to date and stay connected to the community.</p>
+        </article>
+      </section>
+
+      <section class="card shadow profile-card" id="profileSection">
+        <h2>My Profile</h2>
+        <form id="profileForm" class="form-grid" novalidate>
+          <label>
+            Full Name
+            <input type="text" id="profileName" required />
+          </label>
+          <label>
+            Email address
+            <input type="email" id="profileEmail" disabled />
+          </label>
+          <label>
+            Blood Group
+            <select id="profileBloodGroup" required>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" id="profilePhone" required />
+          </label>
+          <label>
+            Address
+            <textarea id="profileAddress" rows="3" required></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Save Profile</button>
+          <p id="profileMessage" class="message"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Red Flag &copy; 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

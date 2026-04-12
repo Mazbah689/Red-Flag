@@ -1,0 +1,449 @@
+:root {
+  --bg: #fff;
+  --surface: #f8f2f2;
+  --primary: #c31b1b;
+  --primary-soft: #fde5e5;
+  --text: #1f1f1f;
+  --muted: #6a6a6a;
+  --border: #e8d6d6;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --radius: 18px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: linear-gradient(180deg, #fff 0%, #f7f1f1 100%);
+  color: var(--text);
+}
+
+body {
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.topnav,
+.auth-nav,
+.search-top,
+.dashboard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a,
+.card-link,
+.btn-link {
+  color: var(--primary);
+}
+
+.btn-link {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.hero-banner {
+  padding: 2rem 0 1rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0 4rem;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 3.3vw, 4rem);
+  line-height: 1.02;
+}
+
+.hero-copy p {
+  max-width: 48rem;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.45rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover,
+button:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(195, 27, 27, 0.18);
+}
+
+.btn-primary:hover {
+  background: #a61616;
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(192, 27, 27, 0.12);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.cards-grid,
+.about-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.mini-card {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+
+.mini-card i,
+.dashboard-menu i,
+.admin-panel h2,
+.profile-card h2,
+.search-heading h1 {
+  color: var(--primary);
+}
+
+.hero-card,
+.about-text,
+.profile-card,
+.search-card,
+.auth-card,
+.admin-panel,
+.admin-table-card {
+  background: #fff;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.95rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--muted);
+}
+
+.feature-list i {
+  color: var(--primary);
+}
+
+.page-content,
+.auth-container,
+.dashboard-container,
+.search-container,
+.admin-container {
+  padding: 2rem 0 4rem;
+}
+
+.auth-container,
+.admin-container {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 120px);
+}
+
+.auth-card,
+.admin-dashboard,
+.admin-panel,
+.admin-table-card,
+.profile-card,
+.search-card {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.55rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.95rem 1rem;
+  background: #fff;
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid rgba(195, 27, 27, 0.18);
+  outline-offset: 2px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.small-text,
+.message {
+  margin: 0;
+  color: var(--muted);
+}
+
+.message {
+  min-height: 1.4rem;
+}
+
+.site-footer {
+  display: grid;
+  place-items: center;
+  padding: 1.5rem 0;
+  color: var(--muted);
+}
+
+.dashboard-container {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.dashboard-greeting,
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.dashboard-menu {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.dashboard-menu article,
+.search-card,
+.admin-panel,
+.admin-table-card {
+  min-height: 180px;
+}
+
+.dashboard-menu article {
+  display: grid;
+  gap: 1rem;
+}
+
+.dashboard-menu article i {
+  font-size: 2rem;
+}
+
+.dashboard-menu h3,
+.admin-panel h2,
+.profile-card h2,
+.search-heading h1,
+.admin-table-card h2 {
+  margin: 0;
+}
+
+.profile-card {
+  display: none;
+}
+
+.profile-card.active {
+  display: block;
+}
+
+.search-form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(220px, 360px) max-content;
+  align-items: end;
+}
+
+.search-form button {
+  width: max-content;
+}
+
+.result-panel {
+  margin-top: 1.5rem;
+}
+
+.results-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.result-card {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(195, 27, 27, 0.1);
+}
+
+.result-card h3 {
+  margin: 0;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 1rem 0.8rem;
+  border-bottom: 1px solid #f0ecec;
+}
+
+.data-table th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.data-table tbody tr:hover {
+  background: #fff5f5;
+}
+
+.admin-table-card {
+  padding: 1.5rem;
+}
+
+.admin-header {
+  padding: 1.8rem;
+}
+
+.logout-btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .dashboard-greeting,
+  .admin-header {
+    grid-template-columns: 1fr;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .topnav,
+  .auth-nav,
+  .search-top,
+  .dashboard-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding-top: 1rem;
+  }
+
+  .btn,
+  .button {
+    width: 100%;
+  }
+}
+
+/* Hover effects for auth links */
+.auth-link-register:hover {
+  color: #c31b1b;
+}
+
+.auth-link-login:hover {
+  color: #c31b1b;
+}

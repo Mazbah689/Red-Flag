@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Red Flag</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body data-page="login">
+    <header class="auth-header">
+      <div class="container auth-nav">
+        <a class="brand" href="index.html">Red Flag</a>
+      </div>
+    </header>
+
+    <main class="container auth-container">
+      <div class="auth-card card shadow">
+        <h1>Login</h1>
+        <form id="loginForm" class="form-grid" novalidate>
+          <label>
+            Email address
+            <input type="email" id="loginEmail" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="loginPassword" name="password" placeholder="Enter password" required />
+          </label>
+          <button class="btn btn-primary" type="submit">Login</button>
+          <p class="small-text">New here? <a href="register.html" class="auth-link-register">Register now!</a></p>
+          <p id="loginMessage" class="message"></p>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p>Red Flag &copy; 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="app.js?v=2"></script>
+  </body>
+</html>

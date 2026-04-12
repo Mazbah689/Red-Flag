@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red Flag - Blood Donation Management</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  </head>
+  <body data-page="home">
+    <header class="hero-banner">
+      <nav class="topnav container">
+        <a class="brand" href="index.html">Red Flag</a>
+        <div class="nav-links">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+          <a href="search.html">Search</a>
+        </div>
+      </nav>
+      <section class="hero container">
+        <div class="hero-copy">
+          <h1>Find blood donors fast.</h1>
+          <p>Red Flag is a clean, responsive blood donation management platform built for emergencies, community support, and donor coordination.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="register.html">Become a donor</a>
+            <a class="btn btn-secondary" href="search.html">Search donors</a>
+          </div>
+        </div>
+        <div class="hero-card card shadow">
+          <h2>Why Choose Red Flag?</h2>
+          <ul class="feature-list">
+            <li><i class="fa-solid fa-heart-pulse"></i> Fast donor search</li>
+            <li><i class="fa-solid fa-user-plus"></i> Simple registration</li>
+            <li><i class="fa-solid fa-shield-heart"></i> Secure local storage</li>
+            <li><i class="fa-solid fa-mobile-screen"></i> Mobile friendly layout</li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main class="container page-content">
+      <section class="cards-grid">
+        <article class="card shadow">
+          <h3>Quick Access</h3>
+          <p>Login and manage your donor profile, search available donors, or contact people in an emergency.</p>
+          <a class="card-link" href="login.html">User login</a>
+        </article>
+        <article class="card shadow">
+          <h3>Donor Registration</h3>
+          <p>Register once and stay visible to searchers with your blood type, phone number, and location.</p>
+          <a class="card-link" href="register.html">Register now</a>
+        </article>
+        <article class="card shadow">
+          <h3>Search Donors</h3>
+          <p>Find donors by blood group and contact them directly when minutes matter.</p>
+          <a class="card-link" href="search.html">Search donors</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Red Flag &copy; 2026. Built for safe blood donor coordination.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="app.js?v=2"></script>
+  </body>
+</html>
